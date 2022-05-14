@@ -7,10 +7,16 @@ jobs:
     runs-on: ubuntu-18.04
     
     steps:
-      - use: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Install dependencies
-        uses: npm install
+        run: |
+          cd server
+          npm install
       - name: Link
-        uses: npm run linter
+        run: |
+          cd server
+          npm run linter
       - name: Test
-        uses: npm test
+        run: |
+          cd server
+          npm test
