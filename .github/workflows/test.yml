@@ -9,8 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: cd server
-      - run: npm install
+        run: npm install ./server
       - name: Link
         run: npm run linter
       - name: Test
