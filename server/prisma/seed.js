@@ -2,6 +2,7 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 const beaches = require("./data/beaches");
+const userbeaches = require("./data/userBeaches");
 
 
 async function runSeeders() {
@@ -17,6 +18,7 @@ async function runSeeders() {
             })
         )
     );
+	
   
 }
 
@@ -92,6 +94,72 @@ async function runSeeders() {
         });
 		
         runSeeders();
+		
+		const userBeach1 = await prisma.userBeach.upsert({
+			where: {id: 1},
+			update: {
+				latitude: 21.13973,
+				longitude: -86.76884,
+				userId: 1,
+				beachId: 1,
+			},
+			create: {
+				latitude: 21.13973,
+				longitude: -86.76884,
+				userId: 1,
+				beachId: 1,
+			},
+		});
+		
+		const userBeach2 = await prisma.userBeach.upsert({
+			where: {id: 2},
+			update: {
+				latitude: 21.06196,
+				longitude: -86.77858,
+				userId: 1,
+				beachId: 2,
+			},
+			create: {
+				latitude: 21.06196,
+				longitude: -86.77858,
+				userId: 1,
+				beachId: 2,
+			},
+		});
+		
+		const userBeach3 = await prisma.userBeach.upsert({
+			where: {id: 3},
+			update: {
+				latitude: 21.13973,
+				longitude: -86.76884,
+				userId: 2,
+				beachId: 1,				
+			},
+			create: {
+				latitude: 21.13973,
+				longitude: -86.76884,
+				userId: 2,
+				beachId: 1,
+			},
+		});
+		
+			
+		const userBeach4 = await prisma.userBeach.upsert({
+			where: {id: 4},
+			update: {latitude: 21.1323201,
+				longitude: -86.7463679,
+				userId: 2,
+				beachId: 4,},
+			create: {
+				latitude: 21.1323201,
+				longitude: -86.7463679,
+				userId: 2,
+				beachId: 4,
+			},
+		});
+	
+		
+		
 
 
     } catch(e) {
