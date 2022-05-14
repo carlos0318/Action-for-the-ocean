@@ -2,4 +2,4 @@
 
 ### Star Proyect
 
-Run the following commands in the terminal: 'cd server'
+Run the following commands in the terminal: `cd server`
