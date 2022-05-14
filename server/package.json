@@ -4,7 +4,8 @@
   "description": "server for Action for the ocean project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon server.js"
   },
   "author": "Los Super Conocidos",
   "license": "ISC",
