@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int         @id @default(autoincrement())
+  name        String      @db.VarChar(255)
+  lastname    String      @db.VarChar(255)
+  email       String      @unique
+  password    String?
+  country     String      @db.VarChar(255)
+  birthday    DateTime    @default(now())
+  dateCreated DateTime    @default(now())
+  lastUpdated DateTime    @updatedAt
+  UserBeach   UserBeach[]
+}
+
+model Beach {
+  id          Int         @id @default(autoincrement())
+  latitude    Float
+  longitude   Float
+  radius      Float
+  dateCreated DateTime    @default(now())
+  lastUpdated DateTime    @updatedAt
+  UserBeach   UserBeach[]
+}
+
+model UserBeach {
+  id          Int      @id @default(autoincrement())
+  userId      Int?
+  beachId     Int?
+  latitude    Float
+  longitude   Float
+  dateCreated DateTime @default(now())
+
+  User User? @relation(fields: [userId], references: [id])
+
+  Beach Beach? @relation(fields: [beachId], references: [id])
+  @@index([userId], name: "user")
+  @@index([beachId], name: "beach")
+}
