@@ -1,6 +1,25 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
+const beaches = require("./data/beaches");
+
+
+async function runSeeders() {
+ 
+
+    // Beaches
+    await Promise.all(
+        beaches.map(async (beach) =>
+            prisma.beach.upsert({
+                where: { name: beach.name },
+                update: {},
+                create: beach,
+            })
+        )
+    );
+  
+}
+
 (async function main() {
     try {
         const user1 = await prisma.user.upsert({
@@ -71,6 +90,8 @@ const prisma = new PrismaClient();
                 birthday: new Date("8/28/2001")				
             },
         });
+		
+        runSeeders();
 
 
     } catch(e) {
