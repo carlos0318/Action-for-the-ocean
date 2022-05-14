@@ -1,5 +1,5 @@
 # Action-for-the-ocean
 
-Star Proyect
+### Star Proyect
 
 Run the following commands in the terminal: cd server
