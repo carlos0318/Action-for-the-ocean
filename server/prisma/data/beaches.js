@@ -1,5 +1,5 @@
 module.exports = [
-{
+    {
         name: "Playa tortugas",
         latitude: 21.13973,
         longitude: -86.76884,
@@ -11,7 +11,7 @@ module.exports = [
         longitude: -86.77858,
         radius: 0.007
     },
-	{
+    {
         name: "Playa Chac mool",
         latitude: 21.12861,
         longitude: -86.74935,

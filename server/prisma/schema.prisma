@@ -25,6 +25,7 @@ model User {
 
 model Beach {
   id          Int         @id @default(autoincrement())
+  name        String      @unique
   latitude    Float
   longitude   Float
   radius      Float
