@@ -11,6 +11,6 @@ jobs:
       - name: Install dependencies
         uses: npm install
       - name: Link
-        uses: npm run esLint
+        uses: npm run linter
       - name: Test
         uses: npm test

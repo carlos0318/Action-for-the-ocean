@@ -22,6 +22,7 @@ async function runSeeders() {
 
 (async function main() {
     try {
+        // eslint-disable-next-line
         const user1 = await prisma.user.upsert({
             where: { email: "juan@dominio.com" },
             update: {},
@@ -35,7 +36,7 @@ async function runSeeders() {
 				
             },
         });
-
+        // eslint-disable-next-line
         const user2 = await prisma.user.upsert({
             where: { email: "pedro@dominio.com" },
             update: {},
@@ -49,7 +50,7 @@ async function runSeeders() {
 				
             },
         });
-
+        // eslint-disable-next-line
         const user3 = await prisma.user.upsert({
             where: { email: "ana.parra@dominio.com" },
             update: {},
@@ -63,7 +64,7 @@ async function runSeeders() {
 				
             },
         });
-
+        // eslint-disable-next-line
         const user4 = await prisma.user.upsert({
             where: { email: "abril.mendez@dominio.com" },
             update: {},
@@ -77,7 +78,7 @@ async function runSeeders() {
 				
             },
         });
-	
+        // eslint-disable-next-line
         const user5 = await prisma.user.upsert({
             where: { email: "brian.sanchez@dominio.com" },
             update: {},
