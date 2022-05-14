@@ -1,10 +1,10 @@
 const express = require("express");
-const usersRouters = require("./usersRoutes");
+const usersRoutes = require("./usersRoutes");
 
 function routerApi(app) {
   const router = express.router();
   app.use("/api/v1", router);
-  router.use("/users");
+  router.use("/users", usersRoutes);
   router.use("/usersBeach");
 }
 
