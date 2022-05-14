@@ -1,0 +1,16 @@
+name: Run Tests in the project every push on GitHub
+
+on: [push, pull_request]
+
+jobs:
+  build: 
+    runs-on: ubuntu-18.04
+    
+    steps:
+      - use: actions/checkout@v2
+      - name: Install dependencies
+        uses: npm install
+      - name: Link
+        uses: npm run esLint
+      - name: Test
+        uses: npm test
