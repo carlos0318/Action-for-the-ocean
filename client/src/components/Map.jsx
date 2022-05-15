@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import "../styles/Map.css";
 import {
   MapContainer,
@@ -9,22 +9,24 @@ import {
   Circle,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import axios from "axios";
 
-const position = [21.146743185077675, -86.78885941594436]; // 21.146743185077675%2C-86.78885941594436
-
-const center = [21.133207, -86.742121];
-const cente = [21.13, -86.74];
-const center2 = [21.146743185077675, -86.78885941594436]; //21.137305383315613 -86.75806532906708
-const center3 = [21.137305383315613, -86.75806532906708];
-const center4 = [21.129467, -86.749298];
-
-const blackOptions = { color: "green" };
-const rectangle = [
-  [51.49, -0.08],
-  [51.5, -0.06],
-];
+const greenOptions = { color: "green" };
+const yellowOptions = { color: "yellow" };
+const redOptions = { color: "red" };
 
 const Map = ({ coordenadas }) => {
+  const [position, setPosition] = useState([]);
+
+  useEffect(() => {
+    const getCoordenadas = async () => {
+      const res = await axios.get("http://localhost:4000/api/v1/usersBeach/");
+      setPosition(res.data.message);
+    };
+    getCoordenadas();
+  }, []);
+
+  console.log(position);
 
   return (
     <div className="leaflet-container">
@@ -38,15 +40,15 @@ const Map = ({ coordenadas }) => {
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
         </Marker>
-        <Rectangle bounds={rectangle} pathOptions={blackOptions} />
-        <Circle
-          center={center}
-          pathOptions={blackOptions}
-          radius={200}
-        /> 34 <Circle center={cente} pathOptions={blackOptions} radius={200} />
-        <Circle center={center2} pathOptions={blackOptions} radius={200} />
-        <Circle center={center3} pathOptions={blackOptions} radius={200} />
-        <Circle center={center4} pathOptions={blackOptions} radius={200} />
+
+        {position.map((pos, index) => (
+          <Circle
+            center={[pos.latitude, pos.longitude]}
+            pathOptions={pos.rating < 3 ? redOptions : pos.rating < 6 ? yellowOptions : greenOptions}
+            radius={200}
+            key={index}
+          />
+        ))}
       </MapContainer>
     </div>
   );
