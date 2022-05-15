@@ -17,6 +17,7 @@ const Navbar = () => {
         <>
           
           <Link to="/profile">Profile</Link>
+          <Link to="/create-point">Nueva Alerta</Link>
           <a onClick={handelLogout}>Logout</a>
           </>
           ) : (
