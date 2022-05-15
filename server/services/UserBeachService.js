@@ -25,10 +25,19 @@ class UserBeachService {
 
         if(beachId.length>0){
             location.beachId = beachId[0].ID;
-        }else
-            throw new Error("La locacion no se encuentra en una playa registrada");
+        }else{
+            await prisma.userBeach.create({data: location});
+        }
 
-        await prisma.userBeach.create({data: location});
+        const date = Date.now().toLocaleDateString("en-US");
+		
+        const beach = {			
+            name: "Playa "+date,
+            latitude: location.latitude,
+            longitude: location.longitude,
+            radius: 0.007
+        };
+        await prisma.beach.create({data: beach});
         return message;
     }
 
