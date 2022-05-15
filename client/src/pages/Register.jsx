@@ -2,24 +2,27 @@ import { useState } from "react";
 import "../styles/Register.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [user, setUser] = useState({
     name: "",
-    lastName: "",
+    lastname: "",
     email: "",
-    nationality: "",
+    country: "",
     password: "",
   });
   const [error, setError] = useState(false);
   const [errorRegister, setErrorRegister] = useState(false);
+  let navigate = useNavigate();
 
   const handleCreateUser = async(e) => {
     e.preventDefault();
     console.log(user);
     try {
-      const response = await axios.post("http://localhost:4000/api/users/register", user);
+      const response = await axios.post("http://localhost:4000/api/v1/users/register", user);
       console.log(response);
+      navigate("../login", { replace: true });
     } catch(error) {
       console.log(error);
       setErrorRegister(true);
@@ -41,14 +44,14 @@ const Register = () => {
         <h1>Registro</h1>
         <form onSubmit={handleCreateUser}>
           <input type="text" autoFocus name="nombre" id="" placeholder="Nombre"  onChange={e => setUser({...user, name: e.target.value})} />
-          <input type="text" name="apellido" id="" placeholder="Apellido" onChange={e => setUser({...user, lastName: e.target.value})} />
+          <input type="text" name="apellido" id="" placeholder="Apellido" onChange={e => setUser({...user, lastname: e.target.value})} />
           <input type="email" name="email" id="" placeholder="Email" onChange={e => setUser({...user, email: e.target.value})} />
           <input
             type="text"
             name="nacionalidad"
             id=""
             placeholder="Nacionalidad"
-            onChange={e => setUser({...user, nationality: e.target.value})}
+            onChange={e => setUser({...user, country: e.target.value})}
           />
           <input
             type="password"

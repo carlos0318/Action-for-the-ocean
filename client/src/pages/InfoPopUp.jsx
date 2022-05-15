@@ -3,7 +3,6 @@ import { IoClose } from "react-icons/io5";
 import "../styles/InfoPopUp.css";
 
 const InfoPopUp = ({ state, setState }) => {
-  console.log(state);
   return (
     <div className={`info ${state ? "info--show" : "info--hide"}`}>
       <div className="info__title-container">

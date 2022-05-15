@@ -1,15 +1,15 @@
-import {useState} from "react";
+import {useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
+import UserContext from "../context/user/UserContext";
 
 const Navbar = () => {
-  const [user, setUser] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const { user, dispatch } = useContext(UserContext);
 
   return (
     <nav>
       <Link to="/">Home</Link>
-      {user ? (
+      {user.id ? (
         <>
           
           <Link to="/profile">Profile</Link>
