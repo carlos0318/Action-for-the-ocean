@@ -6,14 +6,18 @@ import UserContext from "../context/user/UserContext";
 const Navbar = () => {
   const { user, dispatch } = useContext(UserContext);
 
+  const handelLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  }
+
   return (
     <nav>
       <Link to="/">Home</Link>
-      {user.id ? (
+      {user ? (
         <>
           
           <Link to="/profile">Profile</Link>
-          <Link to="/logout">Logout</Link>
+          <a onClick={handelLogout}>Logout</a>
           </>
           ) : (
             <>

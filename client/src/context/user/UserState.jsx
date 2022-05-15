@@ -4,11 +4,7 @@ import UserContext from './UserContext';
 
 export const UserState = (props) => {
     const initialState = {
-        user: {
-            id: null,
-            name: '',
-            email: '',
-        },
+        user: null,
         error: null,
         loading: false
     };

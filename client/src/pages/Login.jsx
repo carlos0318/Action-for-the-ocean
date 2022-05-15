@@ -20,7 +20,7 @@ const Login = () => {
     };
     try {
       const response = await axios.post("http://localhost:4000/api/v1/users/", user);
-      console.log(response.data.message);
+      response.data.message.password = password;
       dispatch({
         type: "GET_USER",
         payload: response.data.message,

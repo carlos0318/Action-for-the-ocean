@@ -17,4 +17,5 @@ nav > a {
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
+    cursor: pointer;
 }
