@@ -312,6 +312,66 @@ class UserBeachService {
 
 module.exports = UserBeachService;
 ```
+### Referencia de la API
+
+#### Crear usuario
+
+```http
+  POST /api/v1/users/register
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `name,lastname,email,password,country` | `JSON` | Permite crear un nuevo usuario |
+
+#### Logear
+
+```http
+  POST /api/v1/users/register
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `email,password` | `JSON` | Permite logearnos a la aplicacion |
+
+#### Traer informacion del usuario
+
+```http
+  POST http://localhost:4000/api/v1/users/update
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `email` | `JSON` | Traer Informacion del usuario |
+
+#### Actualizar informacion del usuario
+
+```http
+  PUT http://localhost:4000/api/v1/users/update
+```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `email,lastname,email,password,country` | `JSON` | Actualizar la información del usuario |
+
+#### Crear playa
+
+```http
+  POST http://localhost:4000/api/v1/users/update
+```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `userId,latitude,longitude,rating` | `JSON` | Crear nueva playa donde se encuentre el usuario |
+
+#### Traer todas las playas
+
+```http
+  GET http://localhost:4000/api/v1/users/update
+```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| N/A | N/A | Traer todas las locaiones de las playas |
+
+
 
 
 
