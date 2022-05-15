@@ -1,0 +1,33 @@
+.userpoint-container {
+    text-align: center;
+}
+
+.userpoint-container > div > label{
+    font-size: 1.5em;
+    margin: 0 20px;
+}
+
+.userpoint-text {
+    font-size: 1.5em;
+    font-weight: lighter;
+    color: #000;
+    margin: 15px 20px;
+}
+
+.userpoint-button {
+    background-color: #f5f5f5;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 20px 0;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}

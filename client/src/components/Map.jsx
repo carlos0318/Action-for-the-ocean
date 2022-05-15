@@ -24,15 +24,15 @@ const rectangle = [
   [51.5, -0.06],
 ];
 
-const Map = () => {
+const Map = ({ coordenadas }) => {
   return (
     <div className="leaflet-container">
-      <MapContainer center={position} zoom={15}>
+      <MapContainer center={coordenadas} zoom={15}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <Marker position={position}>
+        <Marker position={coordenadas}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
