@@ -13,4 +13,4 @@
 9. In another terminal, run the following commands: `cd client`
 10. Run the following commands in the terminal: `npm install`
 11. Run the following commands in the terminal: `npm start`
-12. Visit the following URL: `http://localhost:8080`
+12. Visit the following URL: `http://localhost:3000`
