@@ -1,0 +1,19 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    height: 100vh;
+    position: relative;
+}
+
+.profile-container-form {
+    z-index: 10;
+}
+
+.profile-img {
+    position: absolute;
+    bottom: 0;
+    rotate: 180deg;
+}
