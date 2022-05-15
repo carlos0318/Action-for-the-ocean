@@ -18,13 +18,11 @@ const Register = () => {
 
   const handleCreateUser = async(e) => {
     e.preventDefault();
-    console.log(user);
     try {
       const response = await axios.post("http://localhost:4000/api/v1/users/register", user);
-      console.log(response);
       navigate("../login", { replace: true });
     } catch(error) {
-      console.log(error);
+      console.log("error");
       setErrorRegister(true);
     }
   };
