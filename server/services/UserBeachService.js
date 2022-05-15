@@ -11,10 +11,10 @@ class UserBeachService {
         const latitude = location.latitude;
         const longitude = location.longitude;
 
-        const lowerLatitude = latitude + radius;
-        const higherLatitude = latitude - radius;
-        const lowerLongitude = longitude + radius;
-        const higherLongitude = longitude - radius;
+        const higherLatitude = latitude + radius;
+        const lowerLatitude = latitude - radius;
+        const higherLongitude = longitude + radius;
+        const lowerLongitude = longitude - radius;
 		
 
         const beachId = await prisma.$queryRaw`select ID from (
@@ -25,6 +25,8 @@ class UserBeachService {
 		)as subtable limit 1`;
 
 
+		
+
         if(beachId){
             location.beachId = beachId;
         }else
@@ -32,6 +34,13 @@ class UserBeachService {
 		
         await prisma.userBeach.create({data: location});
         return message;
+    }
+	
+    static async getAllRatings(){
+        const ratings = await prisma.$queryRaw`select avg(userBeach.rating) as rating,beach.latitude, beach.longitude, beach.name from userBeach
+		inner join beach on beach.id = userBeach.beachId group by beachId`;
+		
+        return ratings;
     }
 
 
