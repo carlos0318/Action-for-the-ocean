@@ -4,6 +4,7 @@ import "../styles/UserPoint.css";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../context/user/UserContext";
+import axios from 'axios';
 
 const UserPoint = () => {
   const { user } = useContext(UserContext);
@@ -13,7 +14,6 @@ const UserPoint = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(user);
     if (!user) {
       navigate("/login");
     }
@@ -27,9 +27,19 @@ const UserPoint = () => {
     );
   }, []);
 
-  const handleCreateNewPoint = (e) => {
+  const handleCreateNewPoint = async (e) => {
     e.preventDefault();
-    console.log(rating);
+    try {
+      await axios.post("http://localhost:4000/api/v1/usersBeach/", {
+        userId: user.id,
+        latitude: coordinates.lat,
+        longitude: coordinates.lng,
+        rating: parseInt(rating),
+      });
+      console.log("created");
+    } catch (error) {
+      console.log('error')
+    }
   };
 
   return (

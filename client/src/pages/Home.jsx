@@ -13,7 +13,6 @@ const Home = () => {
   const navigate = useNavigate();
   
   useEffect(() => {
-    console.log(user);
     if(!user) {
       navigate("/login");
     }
@@ -62,7 +61,7 @@ const Home = () => {
         </p>
       </div>
       <h2 className="sub-title">Califica tu playa</h2>
-      <Map coordenadas={[21.146743185077675, -86.78885941594436]}/>
+      <Map coordenadas={[20.0990267, -98.7003706]}/>
       <div className="calificacion">
         <p>Terrible</p>
         <p>Reluciente</p>

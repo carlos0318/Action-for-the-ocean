@@ -5,7 +5,6 @@ import {
   TileLayer,
   Marker,
   Popup,
-  Rectangle,
   Circle,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -26,7 +25,6 @@ const Map = ({ coordenadas }) => {
     getCoordenadas();
   }, []);
 
-  console.log(position);
 
   return (
     <div className="leaflet-container">
