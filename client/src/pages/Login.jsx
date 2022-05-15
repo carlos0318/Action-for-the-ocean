@@ -25,11 +25,11 @@ const Login = () => {
 
   return (
     <div className="container">
-      <img src="../../public/img/wave.svg" alt="wave" className="img" />
+      <img src="/img/wave.svg" alt="wave" className="img" />
       <div className="login-box">
         <h1>Iniciar Sesion</h1>
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email" onChange={e => setEmail(e.target.value)} />
+          <input type="text" autoFocus placeholder="Email" onChange={e => setEmail(e.target.value)} />
           <input type="password" placeholder="Contraseña" onChange={e => setPassword(e.target.value)} />
 
           {error && <p className="error">Contraseña o correo incorrectos</p>}
