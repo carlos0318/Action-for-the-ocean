@@ -2,8 +2,8 @@ const UserBeachService = require("./../services/UserBeachService");
 
 class UserBeachController {
 
-    static createLocation(user){
-        return UserBeachService.createLocation(user);
+    static createLocation(location){
+        return UserBeachService.createLoacation(location);
     }
 
 }
