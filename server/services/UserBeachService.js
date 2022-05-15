@@ -25,19 +25,19 @@ class UserBeachService {
 
         if(beachId.length>0){
             location.beachId = beachId[0].ID;
+            await prisma.userBeach.create({data: location});
         }else{
+            const date = Date.now();
+		
+            const beach = {			
+                name: "Playa "+date,
+                latitude: location.latitude,
+                longitude: location.longitude,
+                radius: 0.007
+            };
+            await prisma.beach.create({data: beach});
             await prisma.userBeach.create({data: location});
         }
-
-        const date = Date.now().toLocaleDateString("en-US");
-		
-        const beach = {			
-            name: "Playa "+date,
-            latitude: location.latitude,
-            longitude: location.longitude,
-            radius: 0.007
-        };
-        await prisma.beach.create({data: beach});
         return message;
     }
 
