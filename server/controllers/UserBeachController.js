@@ -6,6 +6,10 @@ class UserBeachController {
         return UserBeachService.createLoacation(location);
     }
 
+    static getAllRatings(){
+        return UserBeachService.getAllRatings();
+    }
+
 }
 
 module.exports = UserBeachController;
