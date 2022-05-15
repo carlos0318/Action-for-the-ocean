@@ -2,6 +2,14 @@ const express = require("express");
 const routerApi = require("./routes");
 const app = express();
 const port = 3000;
+const cors = require("cors");
+
+const corsOptions = {
+    origin: "*",
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
