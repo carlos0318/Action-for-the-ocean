@@ -36,7 +36,7 @@ const Register = () => {
 
   return (
     <div className="container">
-      <img src="../../public/img/wave.svg" alt="wave" className="img" />
+      <img src="/img/wave.svg" alt="wave" className="img" />
       <div className="register-container">
         <h1>Registro</h1>
         <form onSubmit={handleCreateUser}>

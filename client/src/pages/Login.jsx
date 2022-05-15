@@ -25,7 +25,7 @@ const Login = () => {
 
   return (
     <div className="container">
-      <img src="../../public/img/wave.svg" alt="wave" className="img" />
+      <img src="/img/wave.svg" alt="wave" className="img" />
       <div className="login-box">
         <h1>Iniciar Sesion</h1>
         <form onSubmit={handleSubmit}>
