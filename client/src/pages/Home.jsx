@@ -1,12 +1,24 @@
-import React from "react";
+import {useState, useContext, useEffect } from "react";
 import Map from "../components/Map";
 import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 import Star from "../components/Star";
 import InfoPopUp from "./InfoPopUp";
+import UserContext from "../context/user/UserContext";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  const [showPopUp, setShowPopUp] = React.useState(false);
+  const [showPopUp, setShowPopUp] = useState(false);
+  const { user } = useContext(UserContext);
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    console.log(user);
+    if(!user.id) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
+
   return (
     <div>
       <Navbar />

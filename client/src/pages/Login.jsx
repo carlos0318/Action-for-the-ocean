@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import '../styles/Login.css';
 import { Link } from "react-router-dom";
 import axios from "axios";
+import UserContext from "../context/user/UserContext";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const { user, dispatch } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,10 +19,14 @@ const Login = () => {
       password,
     };
     try {
-      const response = await axios.post("http://localhost:4000/api/users/login", user);
-      console.log(response);
+      const response = await axios.post("http://localhost:4000/api/v1/users/", user);
+      console.log(response.data.message);
+      dispatch({
+        type: "GET_USER",
+        payload: response.data.message,
+      });
+      navigate("/");
     } catch (error) {
-      console.log(error);
       setError(true);
     }
   };
