@@ -103,12 +103,14 @@ async function runSeeders() {
                 longitude: -86.76884,
                 userId: 1,
                 beachId: 1,
+                rating: 10,
             },
             create: {
                 latitude: 21.13973,
                 longitude: -86.76884,
                 userId: 1,
                 beachId: 1,
+                rating: 6,
             },
         });
         // eslint-disable-next-line
@@ -119,12 +121,14 @@ async function runSeeders() {
                 longitude: -86.77858,
                 userId: 1,
                 beachId: 2,
+                rating: 8,
             },
             create: {
                 latitude: 21.06196,
                 longitude: -86.77858,
                 userId: 1,
                 beachId: 2,
+                rating: 10,
             },
         });
         // eslint-disable-next-line
@@ -134,13 +138,15 @@ async function runSeeders() {
                 latitude: 21.13973,
                 longitude: -86.76884,
                 userId: 2,
-                beachId: 1,				
+                beachId: 1,
+                rating: 6,
             },
             create: {
                 latitude: 21.13973,
                 longitude: -86.76884,
                 userId: 2,
                 beachId: 1,
+                rating: 6,
             },
         });
 		
@@ -150,12 +156,15 @@ async function runSeeders() {
             update: {latitude: 21.1323201,
                 longitude: -86.7463679,
                 userId: 2,
-                beachId: 4,},
+                beachId: 4,
+                rating: 6,
+            },
             create: {
                 latitude: 21.1323201,
                 longitude: -86.7463679,
                 userId: 2,
                 beachId: 4,
+                rating: 6,
             },
         });
 	
