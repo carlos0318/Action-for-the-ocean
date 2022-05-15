@@ -3,9 +3,9 @@ const prisma = new PrismaClient();
 
 class UserBeachService {
 
-    static async register (user) {
-        const message = "Usuario Creado";
-        await prisma.user.create({data: user});
+    static async createLoacation (location) {
+        const message = "Locacion creada";
+        await prisma.userBeach.create({data: location});
         return message;
     }
 
