@@ -40,7 +40,7 @@ const Register = () => {
       <div className="register-container">
         <h1>Registro</h1>
         <form onSubmit={handleCreateUser}>
-          <input type="text" name="nombre" id="" placeholder="Nombre"  onChange={e => setUser({...user, name: e.target.value})} />
+          <input type="text" autoFocus name="nombre" id="" placeholder="Nombre"  onChange={e => setUser({...user, name: e.target.value})} />
           <input type="text" name="apellido" id="" placeholder="Apellido" onChange={e => setUser({...user, lastName: e.target.value})} />
           <input type="email" name="email" id="" placeholder="Email" onChange={e => setUser({...user, email: e.target.value})} />
           <input
