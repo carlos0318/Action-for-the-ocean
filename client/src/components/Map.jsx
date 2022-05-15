@@ -25,6 +25,7 @@ const rectangle = [
 ];
 
 const Map = ({ coordenadas }) => {
+
   return (
     <div className="leaflet-container">
       <MapContainer center={coordenadas} zoom={15}>
