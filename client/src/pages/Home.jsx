@@ -3,8 +3,10 @@ import Map from "../components/Map";
 import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 import Star from "../components/Star";
+import InfoPopUp from "./InfoPopUp";
 
 const Home = () => {
+  const [showPopUp, setShowPopUp] = React.useState(false);
   return (
     <div>
       <Navbar />
@@ -63,8 +65,11 @@ const Home = () => {
         </div>
       </div>
       <div className="btn-container">
-        <button className="btn">¿Como Funciona?</button>
+        <button onClick={() => setShowPopUp((prev) => !prev)} className="btn">
+          ¿Como Funciona?
+        </button>
       </div>
+      <InfoPopUp state={showPopUp} setState={setShowPopUp} />
     </div>
   );
 };
