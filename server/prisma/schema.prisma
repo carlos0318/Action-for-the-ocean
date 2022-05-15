@@ -40,6 +40,7 @@ model UserBeach {
   beachId     Int?
   latitude    Float
   longitude   Float
+  rating      Int?
   dateCreated DateTime @default(now())
 
   User User? @relation(fields: [userId], references: [id])
