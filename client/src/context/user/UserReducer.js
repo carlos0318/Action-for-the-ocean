@@ -1,4 +1,4 @@
-import { GET_USER } from './../types';
+import { GET_USER, LOGOUT } from './../types';
 
 export default (state, action) => {
     switch (action.type) {
@@ -6,6 +6,11 @@ export default (state, action) => {
         return {
             ...state,
             user: action.payload
+        };
+        case LOGOUT:
+        return {
+            ...state,
+            user: null
         };
         default:
         return state;
