@@ -5,7 +5,7 @@ import '../styles/Profile.css';
 import axios from "axios";
 
 const Profile = () => {
-  const { user } = useContext(UserContext);
+  const { user, dispatch } = useContext(UserContext);
   const navigate = useNavigate();
   const [name, setName] = useState(user?.name);
   const [lastname, setLastname] = useState(user?.lastname);
@@ -42,6 +42,10 @@ const Profile = () => {
           password
         });
       console.log("User updated");
+      dispatch({
+        type: "GET_USER",
+        payload: {name, email, password},
+      });
       navigate("/");
     } catch (error) {
       console.log(error);
