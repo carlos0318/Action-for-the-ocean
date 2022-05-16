@@ -13,6 +13,15 @@ Landing page con el objetivo del proyecto
 Consulta las playas y califica que tan contaminadas están
 ![Captura](https://i.imgur.com/q0BekaG.gif)
 
+Edita y personaliza tu información de perfil
+![Captura](https://i.imgur.com/N1VluPv.gif)
+
+Crea tus alertas e informa a los usuarios del estado de las playas
+![Captura](https://i.imgur.com/QaMh1Hq.gif)
+
+Deslogueate de la aplicación
+![Captura](https://i.imgur.com/BlOa9QC.gif)
+
 ### Inicia el Proyecto
 
 1. Clona el repositorio.
