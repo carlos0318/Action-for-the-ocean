@@ -8,7 +8,7 @@ Ingresando a la aplicacion
 ![Captura](https://i.imgur.com/HHG4NIC.gif)
 
 Landing page con el objetivo del proyecto
-![Captura](https://images-ext-2.discordapp.net/external/IrRee9tAFKdj_q06XtH-8n_IROr8e5K_dMev76fTctQ/https/i.imgur.com/On09c7r.mp4)
+![Captura](https://i.imgur.com/On09c7r.gif)
 
 ### Inicia el Proyecto
 
