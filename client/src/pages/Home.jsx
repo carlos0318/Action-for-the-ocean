@@ -1,19 +1,21 @@
-import {useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import Map from "../components/Map";
 import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 import Star from "../components/Star";
 import InfoPopUp from "./InfoPopUp";
 import UserContext from "../context/user/UserContext";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [showPopUp, setShowPopUp] = useState(false);
+  const [selectedStars, setSelectedStars] = useState(0);
+
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
-  
+
   useEffect(() => {
-    if(!user) {
+    if (!user) {
       navigate("/login");
     }
   }, [user, navigate]);
@@ -61,18 +63,20 @@ const Home = () => {
         </p>
       </div>
       <h2 className="sub-title">Califica tu playa</h2>
-      <Map coordenadas={[21.146743185077675, -86.78885941594436]}/>
+      <Map coordenadas={[21.146743185077675, -86.78885941594436]} />
       <div className="calificacion">
         <p>Terrible</p>
         <p>Reluciente</p>
       </div>
       <div className="stars-container">
         <div className="stars">
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={false} />
-          <Star selected={false} />
+          {[...Array(5)].map((n, i) => (
+            <Star
+              key={i}
+              selected={selectedStars > i}
+              onSelect={() => setSelectedStars(i + 1)}
+            />
+          ))}
         </div>
       </div>
       <div className="btn-container">
