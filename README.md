@@ -7,20 +7,24 @@ Action for the ocean es un proyecto realizado para el hackathon de LaunchX que a
 Ingresando a la aplicacion
 ![Captura](https://i.imgur.com/HHG4NIC.gif)
 
-### Start Proyect
+Landing page con el objetivo del proyecto
+![Captura](https://images-ext-2.discordapp.net/external/IrRee9tAFKdj_q06XtH-8n_IROr8e5K_dMev76fTctQ/https/i.imgur.com/On09c7r.mp4)
 
-1. Clone the repository.
-2. Create a new database in MariaDB.
-3. Run the following commands in the terminal: `cd server`
-4. Run the following commands in the terminal: `npm install`
-5. Run the following commands in the terminal: `npx prisma migrate dev --name init` (for creating the table)
-6. Create inside the server folder a file called `.env` with the following content: `DATABASE_URL="postgresql://USER:PASSWORD@localhost:3306/DATABASENAME"` (replace USER, PASSWORD and DATABASENAME with your credentials)
-7. Run the following commands in the terminal: `npm prisma/seed.js` (for enter the data in the database)
-8. Run the following commands in the terminal: `npm start`
-9. In another terminal, run the following commands: `cd client`
-10. Run the following commands in the terminal: `npm install`
-11. Run the following commands in the terminal: `npm start`
-12. Visit the following URL: `http://localhost:3000`
+### Inicia el Proyecto
+
+1. Clona el repositorio.
+2. Crear una nueva base de datos en MariaDB.
+3. Ejecuta el siguiente comando en terminal: `cd server`
+4. Ejecuta el siguiente comando en terminal: `npm install`
+6. Ejecuta el siguiente comando en terminal: `npx prisma migrate dev --name init` (para crear la tabla)
+7. Dentro del folder server, crea el archivo llamado `.env` con el siguiente contenido:
+`DATABASE_URL="mysql://USER:PASSWORD@localhost:3306/DATABASENAME"` (reemplaza USER, PASSWORD and DATABASENAME con tus credenciales)
+8. Ejecuta el siguiente comando en terminal: `npm prisma/seed.js` (para inicializar datos en la base de datos)
+9. Ejecuta el siguiente comando en terminal: `npm start`
+10. En otra terminal, ejecuta el siguiente comando en terminal: `cd client`
+11. Ejecuta el siguiente comando en terminal: `npm install`
+12. Ejecuta el siguiente comando en terminal: `npm start`
+13. Visita la siguiente URL: `http://localhost:3000`
 
 ## Server
 
