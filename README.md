@@ -7,19 +7,19 @@ Action for the ocean es un proyecto realizado para el hackathon de LaunchX que a
 Ingresando a la aplicacion
 ![Captura](https://i.imgur.com/HHG4NIC.gif)
 
-Landing page con el objetivo del proyecto
+Landing page con el objetivo del proyecto <br>
 ![Captura](https://i.imgur.com/On09c7r.gif)
 
-Consulta las playas y califica que tan contaminadas están
+Consulta las playas y califica que tan contaminadas están  <br>
 ![Captura](https://i.imgur.com/q0BekaG.gif)
 
-Edita y personaliza tu información de perfil
+Edita y personaliza tu información de perfil <br>
 ![Captura](https://i.imgur.com/N1VluPv.gif)
 
-Crea tus alertas e informa a los usuarios del estado de las playas
+Crea tus alertas e informa a los usuarios del estado de las playas <br>
 ![Captura](https://i.imgur.com/QaMh1Hq.gif)
 
-Deslogueate de la aplicación
+Deslogueate de la aplicación <br>
 ![Captura](https://i.imgur.com/BlOa9QC.gif)
 
 ### Inicia el Proyecto
