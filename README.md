@@ -7,20 +7,36 @@ Action for the ocean es un proyecto realizado para el hackathon de LaunchX que a
 Ingresando a la aplicacion
 ![Captura](https://i.imgur.com/HHG4NIC.gif)
 
-### Star Proyect
+Landing page con el objetivo del proyecto <br>
+![Captura](https://i.imgur.com/On09c7r.gif)
 
-1. Clone the repository.
-2. Create a new database in PostgreSQL.
-3. Run the following commands in the terminal: `cd server`
-4. Run the following commands in the terminal: `npm install`
-5. Run the following commands in the terminal: `npx prisma migrate dev --name init` (for creating the table)
-6. Create inside the server folder a file called `.env` with the following content: `DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/DATABASENAME?schema=public"` (replace USER, PASSWORD and DATABASENAME with your credentials)
-7. Run the following commands in the terminal: `npm prisma/seed.js` (for enter the data in the database)
-8. Run the following commands in the terminal: `npm start`
-9. In another terminal, run the following commands: `cd client`
-10. Run the following commands in the terminal: `npm install`
-11. Run the following commands in the terminal: `npm start`
-12. Visit the following URL: `http://localhost:3000`
+Consulta las playas y califica que tan contaminadas están  <br>
+![Captura](https://i.imgur.com/q0BekaG.gif)
+
+Edita y personaliza tu información de perfil <br>
+![Captura](https://i.imgur.com/N1VluPv.gif)
+
+Crea tus alertas e informa a los usuarios del estado de las playas <br>
+![Captura](https://i.imgur.com/QaMh1Hq.gif)
+
+Deslogueate de la aplicación <br>
+![Captura](https://i.imgur.com/BlOa9QC.gif)
+
+### Inicia el Proyecto
+
+1. Clona el repositorio.
+2. Crear una nueva base de datos en MariaDB.
+3. Ejecuta el siguiente comando en terminal: `cd server`
+4. Ejecuta el siguiente comando en terminal: `npm install`
+6. Ejecuta el siguiente comando en terminal: `npx prisma migrate dev --name init` (para crear la tabla)
+7. Dentro del folder server, crea el archivo llamado `.env` con el siguiente contenido:
+`DATABASE_URL="mysql://USER:PASSWORD@localhost:3306/DATABASENAME"` (reemplaza USER, PASSWORD and DATABASENAME con tus credenciales)
+8. Ejecuta el siguiente comando en terminal: `npm prisma/seed.js` (para inicializar datos en la base de datos)
+9. Ejecuta el siguiente comando en terminal: `npm start`
+10. En otra terminal, ejecuta el siguiente comando en terminal: `cd client`
+11. Ejecuta el siguiente comando en terminal: `npm install`
+12. Ejecuta el siguiente comando en terminal: `npm start`
+13. Visita la siguiente URL: `http://localhost:3000`
 
 ## Server
 
@@ -374,6 +390,10 @@ module.exports = UserBeachService;
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | N/A | N/A | Traer todas las locaiones de las playas |
+
+## Diseño de la Base de datos
+
+![Captura](https://i.imgur.com/PogECzk.png)
 
 
 
