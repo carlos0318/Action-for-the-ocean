@@ -1,14 +1,16 @@
 import { useState, useEffect, useContext } from "react";
 import Map from "../components/Map";
+import Star from "../components/Star";
 import "../styles/UserPoint.css";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../context/user/UserContext";
-import axios from 'axios';
+import axios from "axios";
 
 const UserPoint = () => {
   const { user } = useContext(UserContext);
-  const [rating, setRating] = useState(0);
+  const [selectedStars, setSelectedStars] = useState(0);
+  const [rating, setRating] = useState(selectedStars * 2);
   const coordenadas = [21.146743185077675, -86.78885941594436];
   const [coordinates, setCoordinates] = useState([]);
   const navigate = useNavigate();
@@ -38,7 +40,7 @@ const UserPoint = () => {
       });
       console.log("created");
     } catch (error) {
-      console.log('error')
+      console.log("error");
     }
   };
 
@@ -52,7 +54,7 @@ const UserPoint = () => {
       </p>
       <div>
         <label htmlFor="rating">Rating:</label>
-        <input
+        {/* <input
           type="number"
           id="rating"
           name="rating"
@@ -60,9 +62,18 @@ const UserPoint = () => {
           max="10"
           value={rating}
           onChange={(e) => setRating(e.target.value)}
-        />
+        /> */}
+        {[...Array(5)].map((n, i) => (
+          <Star
+            key={i}
+            selected={selectedStars > i}
+            onSelect={() => setSelectedStars(i + 1)}
+          />
+        ))}
       </div>
-      <button className="userpoint-button"  onClick={handleCreateNewPoint}>Crear una nueva alerta</button>
+      <button className="userpoint-button" onClick={handleCreateNewPoint}>
+        Crear una nueva alerta
+      </button>
 
       <Map coordenadas={coordenadas} />
     </div>
