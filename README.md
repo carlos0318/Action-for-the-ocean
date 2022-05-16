@@ -382,6 +382,10 @@ module.exports = UserBeachService;
 | :-------- | :------- | :------------------------- |
 | N/A | N/A | Traer todas las locaiones de las playas |
 
+## Diseño de la Base de datos
+
+![Captura](https://i.imgur.com/PogECzk.png)
+
 
 
 
