@@ -1,7 +1,8 @@
 # Action for the ocean
 
 Action for the ocean es un proyecto realizado para el hackathon de LaunchX que ayudara a la conservación de playas y oceanos de México. 
-
+Team:
+https://github.com/roblesvargas97 https://github.com/hpoggi https://github.com/carlos0318 https://github.com/PabloLeonA
 ## Funcionamiento de la pagina
 
 Ingresando a la aplicacion
