@@ -10,6 +10,9 @@ Ingresando a la aplicacion
 Landing page con el objetivo del proyecto
 ![Captura](https://i.imgur.com/On09c7r.gif)
 
+Consulta las playas y califica que tan contaminadas están
+![Captura](https://i.imgur.com/q0BekaG.gif)
+
 ### Inicia el Proyecto
 
 1. Clona el repositorio.
