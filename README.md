@@ -2,26 +2,57 @@
 
 Action for the ocean es un proyecto realizado para el hackathon de LaunchX que ayudara a la conservación de playas y oceanos de México. 
 Team:
-**https://github.com/roblesvargas97** // **https://github.com/hpoggi** // **https://github.com/carlos0318** // **https://github.com/PabloLeonA** 
+
+## Integrantes
+
+- [**SaulDelCarmenH**](https://github.com/SaulDelCarmenH)
+- [**Hpoggi**](https://github.com/hpoggi)
+- [**Carlos0318**](https://github.com/carlos0318)
+- [**PabloLeonA**](https://github.com/PabloLeonA)
+- [**Roblesvargas97**](https://github.com/roblesvargas97)
+
+## Tecnologias Utilizadas
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+
 ## Funcionamiento de la pagina
 
 Ingresando a la aplicacion
-![Captura](https://i.imgur.com/HHG4NIC.gif)
+<p align="center">
+ <img src="https://i.imgur.com/HHG4NIC.gif"/>
+</p>
 
 Landing page con el objetivo del proyecto <br>
-![Captura](https://i.imgur.com/On09c7r.gif)
+<p align="center">
+ <img src="https://i.imgur.com/On09c7r.gif"/>
+</p>
 
 Consulta las playas y califica que tan contaminadas están  <br>
-![Captura](https://i.imgur.com/q0BekaG.gif)
+<p align="center">
+ <img src="https://i.imgur.com/q0BekaG.gif"/>
+</p>
 
 Edita y personaliza tu información de perfil <br>
-![Captura](https://i.imgur.com/N1VluPv.gif)
+<p align="center">
+ <img src="https://i.imgur.com/N1VluPv.gif"/>
+</p>
+
 
 Crea tus alertas e informa a los usuarios del estado de las playas <br>
-![Captura](https://i.imgur.com/QaMh1Hq.gif)
+<p align="center">
+ <img src="https://i.imgur.com/QaMh1Hq.gif"/>
+</p>
 
 Deslogueate de la aplicación <br>
-![Captura](https://i.imgur.com/BlOa9QC.gif)
+<p align="center">
+ <img src="https://i.imgur.com/BlOa9QC.gif"/>
+</p>
 
 ### Inicia el Proyecto
 
