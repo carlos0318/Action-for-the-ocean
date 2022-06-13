@@ -1,3 +1,5 @@
+[![Run Tests in the project every push on GitHub](https://github.com/carlos0318/Action-for-the-ocean/actions/workflows/test.yml/badge.svg)](https://github.com/carlos0318/Action-for-the-ocean/actions/workflows/test.yml)
+
 # Action for the ocean
 
 Action for the ocean es un proyecto realizado para el hackathon de LaunchX que ayudara a la conservación de playas y oceanos de México. 
