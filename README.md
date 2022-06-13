@@ -2,8 +2,7 @@
 
 # Action for the ocean
 
-Action for the ocean es un proyecto realizado para el hackathon de LaunchX que ayudara a la conservación de playas y oceanos de México. 
-Team:
+Action for the ocean es un proyecto realizado para el hackathon de LaunchX que ayudara a la conservación de playas y oceanos de México.
 
 ## Integrantes
 
